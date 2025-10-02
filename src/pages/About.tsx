@@ -24,22 +24,19 @@ const About = () => {
       name: "Bruno Melo Brentan",
       description: "Especialista em Hidroinformática, com experiência em análise de sistemas de abastecimento de água. Aplica IA e otimização em diversos sistemas de recursos hídricos",
       initials: "BB",
-      /* image removed */, photo: "Bruno Brentan.jpg"},
+      photo: "Bruno Brentan.jpg"},
     {
       name: "Gustavo Meirelles Lima", 
       description: "Otimização e modelagem hidráulica em sistemas de abastecimento de água e usinas hidrelétricas",
-      initials: "GM",
-      /* image removed */},
+      initials: "GM" },
     {
       name: "André Ferreira Rodrigues",
       description: "Doutor em Recursos Hídricos com atuação em hidrologia, modelagem de eventos extremos e aplicação de IA em hidrologia",
-      initials: "AR",
-      /* image removed */},
+      initials: "AR" },
     {
       name: "Rodrigo Perdigão Gomes Bezerra",
       description: "Sistemas de previsão de inundação com utilização de redes neurais e modelagem hidrodinâmica de rápido processamento",
-      initials: "RP",
-      /* image removed */}
+      initials: "RP" }
   ];
 
   const hidrologia = [
@@ -76,8 +73,7 @@ const About = () => {
     {
       name: "Gabriela Modesto Azevedo",
       description: "Modelagem hidrológica com uso de redes neurais aplicada à bacia do Rio Negro, na Amazônia",
-      initials: "GA",
-      /* image removed */},
+      initials: "GA" },
     {
       name: "Isabela Zini de Oliveira",
       description: "Pesquisa científica focada em sistemas de previsão de inundação com utilização de redes neurais",
@@ -91,8 +87,7 @@ const About = () => {
     {
       name: "Lorena Grochowski Sabino dos Santos",
       description: "Iniciação científica na área de hidrogeologia",
-      initials: "LS",
-      /* image removed */},
+      initials: "LS" },
     {
       name: "Marina Marcela de Paula Kolanski",
       description: "Engenheira ambiental, mestranda pelo programa SMARH da UFMG, com foco em eventos extremos e modelagem hidrológica",
@@ -144,8 +139,7 @@ const About = () => {
     {
       name: "Jordana Madeira Alaggio Ribeiro",
       description: "Pesquisa em modelagem hidráulica com ênfase em métodos computacionais e técnicas de IA",
-      initials: "JR",
-      /* image removed */},
+      initials: "JR" },
     {
       name: "Leandro Alves Evangelista",
       description: "Modelagem hidráulica e otimização de sistemas de abastecimento de água",
@@ -159,18 +153,16 @@ const About = () => {
     {
       name: "Pedro Orsini Cotta",
       description: "Graduando em Engenharia Civil, pesquisa aplicação de IA em redes de distribuição para detecção de vazamentos",
-      initials: "PC",
-      /* image removed */},
+      initials: "PC" },
     {
       name: "Pedro Vasconcellos Diaz",
       description: "Graduando em Engenharia Civil, iniciação científica em monitoramento de redes de distribuição com IA",
-      initials: "PD",
-      /* image removed */},
+      initials: "PD" },
     {
       name: "Rafael Barreto Ferreira",
       description: "Pesquisa no uso de machine learning para previsão de estado de funcionamento de redes de abastecimento",
       initials: "RF",
-      /* image removed */, photo: "Rafael Barreto.heic"},
+      photo: "Rafael Barreto.heic"},
     {
       name: "Rui Gabriel Modesto de Souza",
       description: "Otimização e modelagem hidráulica em sistemas de abastecimento de água",
@@ -260,7 +252,7 @@ const About = () => {
                   <Card key={index} className="shadow-elegant border-0 hover:shadow-lg transition-smooth">
                     <CardContent className="p-6 text-center">
                        <Avatar className="w-16 h-16 mx-auto mb-4">
-                         <AvatarImage src={m.photo ? teamSrc(m.photo) : undefined} />
+                         <AvatarImage src={member.photo ? teamSrc(member.photo) : undefined} />
                          <AvatarFallback className="bg-primary text-primary-foreground text-sm font-semibold">
                            {member.initials}
                          </AvatarFallback>
@@ -281,7 +273,7 @@ const About = () => {
                   <Card key={index} className="shadow-elegant border-0 hover:shadow-lg transition-smooth">
                     <CardContent className="p-5 text-center">
                       <Avatar className="w-14 h-14 mx-auto mb-3">
-                        <AvatarImage src={m.photo ? teamSrc(m.photo) : undefined} />
+                        <AvatarImage src={member.photo ? teamSrc(member.photo) : undefined} />
                         <AvatarFallback className="bg-secondary text-secondary-foreground text-sm font-semibold">
                           {member.initials}
                         </AvatarFallback>
@@ -302,7 +294,7 @@ const About = () => {
                   <Card key={index} className="shadow-elegant border-0 hover:shadow-lg transition-smooth">
                     <CardContent className="p-5 text-center">
                       <Avatar className="w-14 h-14 mx-auto mb-3">
-                        <AvatarImage src={m.photo ? teamSrc(m.photo) : undefined} />
+                        <AvatarImage src={member.photo ? teamSrc(member.photo) : undefined} />
                         <AvatarFallback className="bg-accent text-accent-foreground text-sm font-semibold">
                           {member.initials}
                         </AvatarFallback>
