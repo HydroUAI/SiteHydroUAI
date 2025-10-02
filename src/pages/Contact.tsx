@@ -179,27 +179,32 @@ const Contact = () => {
         </div>
 
         {/* Map Section */}
-<div className="mt-16">
-  <Card className="shadow-elegant">
-    <CardHeader>
-      <CardTitle className="text-center">Nossa Localização</CardTitle>
-      <CardDescription className="text-center">
-        Venha nos visitar no campus da universidade
-      </CardDescription>
-    </CardHeader>
-    <CardContent>
-      <div className="relative w-full h-[360px] md:h-[460px] rounded-lg overflow-hidden border">
-        <iframe
-          src="https://www.google.com/maps?q=Universidade+Federal+de+Minas+Gerais&hl=pt&z=15&output=embed"
-          className="w-full h-full border-0"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title="Mapa - UFMG"
-        />
-      </div>
-    </CardContent>
-  </Card>
-</div>
+        <div className="mt-16">
+          <Card className="shadow-elegant">
+            <CardHeader>
+              <CardTitle className="text-center">Nossa Localização</CardTitle>
+              <CardDescription className="text-center">
+                Venha nos visitar no campus da universidade
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="w-full h-64 bg-muted rounded-lg flex items-center justify-center">
+                <div className="text-center text-muted-foreground">
+                  <MapPin className="w-12 h-12 mx-auto mb-4" />
+                  <p><div className="relative w-full h-[360px] md:h-[460px] rounded-xl overflow-hidden border">
+  <iframe
+    src="https://www.google.com/maps?q=Universidade+Federal+de+Minas+Gerais&hl=pt&z=15&output=embed"
+    className="w-full h-full border-0"
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    title="Mapa - UFMG"
+  />
+</div></p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </div>;
 };

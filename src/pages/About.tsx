@@ -24,24 +24,27 @@ const About = () => {
       name: "Bruno Melo Brentan",
       description: "Especialista em Hidroinformática, com experiência em análise de sistemas de abastecimento de água. Aplica IA e otimização em diversos sistemas de recursos hídricos",
       initials: "BB",
-      photo: "Bruno Brentan.jpg"},
+      /* image removed */, photo: "Bruno Brentan.jpg"},
     {
-      name: "Gustavo Meirelles Lima", 
+      name: "Gustavo Meirelles Lima", photo: "Gustavo.jpg", , 
       description: "Otimização e modelagem hidráulica em sistemas de abastecimento de água e usinas hidrelétricas",
-      initials: "GM" },
+      initials: "GM",
+      /* image removed */},
     {
-      name: "André Ferreira Rodrigues",
+      name: "André Ferreira Rodrigues", photo: "Andre.jpg", ,
       description: "Doutor em Recursos Hídricos com atuação em hidrologia, modelagem de eventos extremos e aplicação de IA em hidrologia",
-      initials: "AR" },
+      initials: "AR",
+      /* image removed */},
     {
-      name: "Rodrigo Perdigão Gomes Bezerra",
+      name: "Rodrigo Perdigão Gomes Bezerra", photo: "Rodrigo.jpg", ,
       description: "Sistemas de previsão de inundação com utilização de redes neurais e modelagem hidrodinâmica de rápido processamento",
-      initials: "RP" }
+      initials: "RP",
+      /* image removed */}
   ];
 
   const hidrologia = [
     {
-      name: "Anna Flávia Almeida Perini", photo: "AnnaPerini.jpg",
+      name: "Anna Flávia Almeida Perini", photo: "AnnaPerini.jpg", ,
       description: "Doutoranda em Recursos Hídricos, com atuação em hidrologia, desenvolvendo pesquisas relacionadas aos impactos e à dinâmica dos eventos de seca",
       initials: "AP"
     },
@@ -56,7 +59,7 @@ const About = () => {
       initials: "DJ"
     },
     {
-      name: "Ernesto José Garcia Canellas", photo: "Ernesto.jpg",
+      name: "Ernesto José Garcia Canellas", photo: "Ernesto.jpg", ,
       description: "Graduando em Engenharia Ambiental com iniciação científica em modelagem hidrológica aplicada no Rio Grande do Sul",
       initials: "EC"
     },
@@ -71,9 +74,10 @@ const About = () => {
       initials: "GP"
     },
     {
-      name: "Gabriela Modesto Azevedo",
+      name: "Gabriela Modesto Azevedo", photo: "Gabriela.jpg", ,
       description: "Modelagem hidrológica com uso de redes neurais aplicada à bacia do Rio Negro, na Amazônia",
-      initials: "GA" },
+      initials: "GA",
+      /* image removed */},
     {
       name: "Isabela Zini de Oliveira",
       description: "Pesquisa científica focada em sistemas de previsão de inundação com utilização de redes neurais",
@@ -85,21 +89,22 @@ const About = () => {
       initials: "JL"
     },
     {
-      name: "Lorena Grochowski Sabino dos Santos",
+      name: "Lorena Grochowski Sabino dos Santos", photo: "Lorena.jpg", ,
       description: "Iniciação científica na área de hidrogeologia",
-      initials: "LS" },
+      initials: "LS",
+      /* image removed */},
     {
-      name: "Marina Marcela de Paula Kolanski",
+      name: "Marina Marcela de Paula Kolanski", photo: "Marina Kolanski.jpg", ,
       description: "Engenheira ambiental, mestranda pelo programa SMARH da UFMG, com foco em eventos extremos e modelagem hidrológica",
       initials: "MK"
     },
     {
-      name: "Pedro Henrique Bernardes Solha",
+      name: "Pedro Henrique Bernardes Solha", photo: "Pedro Solha.jpg", ,
       description: "Modelagem hidrológica com redes neurais artificiais, previsão de inundações, inteligência artificial explicável",
       initials: "PS"
     },
     {
-      name: "Taís Fonte Boa de Campos Maia",
+      name: "Taís Fonte Boa de Campos Maia", photo: "Taís Fonte Boa.jpg", ,
       description: "Engenheira ambiental, mestranda em hidrologia com ênfase em IA e aprendizado de máquina para modelagem hidrológica",
       initials: "TM"
     }
@@ -137,39 +142,42 @@ const About = () => {
       initials: "JG"
     },
     {
-      name: "Jordana Madeira Alaggio Ribeiro",
+      name: "Jordana Madeira Alaggio Ribeiro", photo: "Jordana Madeira.jpg", ,
       description: "Pesquisa em modelagem hidráulica com ênfase em métodos computacionais e técnicas de IA",
-      initials: "JR" },
+      initials: "JR",
+      /* image removed */},
     {
       name: "Leandro Alves Evangelista",
       description: "Modelagem hidráulica e otimização de sistemas de abastecimento de água",
       initials: "LE"
     },
     {
-      name: "Marina Vilaça Mendonça",
+      name: "Marina Vilaça Mendonça", photo: "Marina Kolanski.jpg", ,
       description: "Graduanda em Engenharia Ambiental, iniciação científica em sistemas de abastecimento de água e hidráulica",
       initials: "MV"
     },
     {
-      name: "Pedro Orsini Cotta",
+      name: "Pedro Orsini Cotta", photo: "Pedro Dias.jpg", ,
       description: "Graduando em Engenharia Civil, pesquisa aplicação de IA em redes de distribuição para detecção de vazamentos",
-      initials: "PC" },
+      initials: "PC",
+      /* image removed */},
     {
-      name: "Pedro Vasconcellos Diaz",
+      name: "Pedro Vasconcellos Diaz", photo: "Pedro Dias.jpg", ,
       description: "Graduando em Engenharia Civil, iniciação científica em monitoramento de redes de distribuição com IA",
-      initials: "PD" },
+      initials: "PD",
+      /* image removed */},
     {
       name: "Rafael Barreto Ferreira",
       description: "Pesquisa no uso de machine learning para previsão de estado de funcionamento de redes de abastecimento",
       initials: "RF",
-      photo: "Rafael Barreto.heic"},
+      /* image removed */, photo: "Rafael Barreto.heic"},
     {
       name: "Rui Gabriel Modesto de Souza",
       description: "Otimização e modelagem hidráulica em sistemas de abastecimento de água",
       initials: "RG"
     },
     {
-      name: "Talles Luca Silva Matos",
+      name: "Talles Luca Silva Matos", photo: "Talles.jpg", ,
       description: "Pesquisador em Engenharia Civil, iniciação científica aplicando IA e técnicas de otimização em redes de água",
       initials: "TL"
     },
@@ -252,7 +260,7 @@ const About = () => {
                   <Card key={index} className="shadow-elegant border-0 hover:shadow-lg transition-smooth">
                     <CardContent className="p-6 text-center">
                        <Avatar className="w-16 h-16 mx-auto mb-4">
-                         <AvatarImage src={member.photo ? teamSrc(member.photo) : undefined} />
+                         <AvatarImage src={m.photo ? teamSrc(m.photo) : undefined} />
                          <AvatarFallback className="bg-primary text-primary-foreground text-sm font-semibold">
                            {member.initials}
                          </AvatarFallback>
@@ -273,7 +281,7 @@ const About = () => {
                   <Card key={index} className="shadow-elegant border-0 hover:shadow-lg transition-smooth">
                     <CardContent className="p-5 text-center">
                       <Avatar className="w-14 h-14 mx-auto mb-3">
-                        <AvatarImage src={member.photo ? teamSrc(member.photo) : undefined} />
+                        <AvatarImage src={m.photo ? teamSrc(m.photo) : undefined} />
                         <AvatarFallback className="bg-secondary text-secondary-foreground text-sm font-semibold">
                           {member.initials}
                         </AvatarFallback>
@@ -294,7 +302,7 @@ const About = () => {
                   <Card key={index} className="shadow-elegant border-0 hover:shadow-lg transition-smooth">
                     <CardContent className="p-5 text-center">
                       <Avatar className="w-14 h-14 mx-auto mb-3">
-                        <AvatarImage src={member.photo ? teamSrc(member.photo) : undefined} />
+                        <AvatarImage src={m.photo ? teamSrc(m.photo) : undefined} />
                         <AvatarFallback className="bg-accent text-accent-foreground text-sm font-semibold">
                           {member.initials}
                         </AvatarFallback>
