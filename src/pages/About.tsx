@@ -4,7 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Users, BookOpen, GraduationCap, Calendar } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const teamSrc = (file?: string) => (file ? `/team/${file}` : undefined);
+const teamSrc = (file?: string) => (file ? import.meta.env.BASE_URL + "team/" + file : undefined);
 
 const About = () => {
   const { t } = useLanguage();
@@ -17,8 +17,7 @@ const About = () => {
     t("about.research.optimization"),
     t("about.research.prediction"),
     t("about.research.management"),
-    t("about.research.sustainability"),
-  ];
+    t("about.research.sustainability")];
 
   const coordenacao = [
     {
@@ -48,8 +47,7 @@ const About = () => {
         "Sistemas de previsão de inundação com utilização de redes neurais e modelagem hidrodinâmica de rápido processamento",
       initials: "RP",
       photo: "Rodrigo.jpg",
-    },
-  ];
+    }];
 
   const hidrologia = [
     {
@@ -135,8 +133,7 @@ const About = () => {
       description:
         "Engenheira ambiental, mestranda em hidrologia com ênfase em IA e aprendizado de máquina para modelagem hidrológica",
       initials: "TM",
-    },
-  ];
+    }];
 
   const hidraulica = [
     {
@@ -240,12 +237,11 @@ const About = () => {
       description:
         "Otimização e modelagem matemático-computacional de redes de distribuição de água",
       initials: "TF",
-    },
-  ];
+    }];
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
+      {}
       <section className="gradient-hero text-white py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6">{t("about.title")}</h1>
@@ -255,7 +251,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission and Vision */}
+      {}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 mb-16">
@@ -286,7 +282,7 @@ const About = () => {
             </Card>
           </div>
 
-          {/* Research Areas */}
+          {}
           <Card className="shadow-elegant border-0 mb-16">
             <CardHeader>
               <CardTitle className="text-3xl text-center text-primary">
@@ -304,13 +300,13 @@ const About = () => {
             </CardContent>
           </Card>
 
-          {/* Team */}
+          {}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center text-primary mb-12">
               {t("about.team.title")}
             </h2>
 
-            {/* Coordenação */}
+            {}
             <div className="mb-12">
               <h3 className="text-2xl font-semibold text-primary mb-8 text-center">
                 Coordenação
@@ -337,7 +333,7 @@ const About = () => {
               </div>
             </div>
 
-            {/* Hidrologia */}
+            {}
             <div className="mb-12">
               <h3 className="text-2xl font-semibold text-primary mb-8 text-center">
                 Hidrologia
@@ -364,7 +360,7 @@ const About = () => {
               </div>
             </div>
 
-            {/* Hidráulica */}
+            {}
             <div className="mb-12">
               <h3 className="text-2xl font-semibold text-primary mb-8 text-center">
                 Hidráulica
@@ -392,7 +388,7 @@ const About = () => {
             </div>
           </div>
 
-          {/* Statistics */}
+          {}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
