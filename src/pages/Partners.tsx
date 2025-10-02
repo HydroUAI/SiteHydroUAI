@@ -19,7 +19,7 @@ const partners: Partner[] = [
   {
     "name": "Deltares",
     "url": "https://www.deltares.nl/en",
-    "logo": "delteras.png"
+    "logo": "deltares.png"
   },
   {
     "name": "Stattus4",
