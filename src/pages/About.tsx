@@ -17,7 +17,8 @@ const About = () => {
     t("about.research.optimization"),
     t("about.research.prediction"),
     t("about.research.management"),
-    t("about.research.sustainability")];
+    t("about.research.sustainability"),
+  ];
 
   const coordenacao = [
     {
@@ -47,7 +48,8 @@ const About = () => {
         "Sistemas de previsão de inundação com utilização de redes neurais e modelagem hidrodinâmica de rápido processamento",
       initials: "RP",
       photo: "Rodrigo.jpg",
-    }];
+    },
+  ];
 
   const hidrologia = [
     {
@@ -133,7 +135,8 @@ const About = () => {
       description:
         "Engenheira ambiental, mestranda em hidrologia com ênfase em IA e aprendizado de máquina para modelagem hidrológica",
       initials: "TM",
-    }];
+    },
+  ];
 
   const hidraulica = [
     {
@@ -187,7 +190,7 @@ const About = () => {
     },
     {
       name: "Marina Vilaça Mendonça",
-      photo: "Marina Kolanski.jpg",
+      photo: "Marina.jpg",
       description:
         "Graduanda em Engenharia Ambiental, iniciação científica em sistemas de abastecimento de água e hidráulica",
       initials: "MV",
@@ -237,11 +240,12 @@ const About = () => {
       description:
         "Otimização e modelagem matemático-computacional de redes de distribuição de água",
       initials: "TF",
-    }];
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-background">
-      {}
+      {/* Header */}
       <section className="gradient-hero text-white py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6">{t("about.title")}</h1>
@@ -251,7 +255,7 @@ const About = () => {
         </div>
       </section>
 
-      {}
+      {/* Mission and Vision */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 mb-16">
@@ -282,7 +286,7 @@ const About = () => {
             </Card>
           </div>
 
-          {}
+          {/* Research Areas */}
           <Card className="shadow-elegant border-0 mb-16">
             <CardHeader>
               <CardTitle className="text-3xl text-center text-primary">
@@ -300,13 +304,13 @@ const About = () => {
             </CardContent>
           </Card>
 
-          {}
+          {/* Team */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center text-primary mb-12">
               {t("about.team.title")}
             </h2>
 
-            {}
+            {/* Coordenação */}
             <div className="mb-12">
               <h3 className="text-2xl font-semibold text-primary mb-8 text-center">
                 Coordenação
@@ -315,7 +319,7 @@ const About = () => {
                 {coordenacao.map((member, index) => (
                   <Card key={index} className="shadow-elegant border-0 hover:shadow-lg transition-smooth">
                     <CardContent className="p-6 text-center">
-                      <Avatar className="w-16 h-16 mx-auto mb-4">
+                      <Avatar className="w-20 h-20 mx-auto mb-4">
                         <AvatarImage src={member.photo ? teamSrc(member.photo) : undefined} />
                         <AvatarFallback className="bg-primary text-primary-foreground text-sm font-semibold">
                           {member.initials}
@@ -333,7 +337,7 @@ const About = () => {
               </div>
             </div>
 
-            {}
+            {/* Hidrologia */}
             <div className="mb-12">
               <h3 className="text-2xl font-semibold text-primary mb-8 text-center">
                 Hidrologia
@@ -342,7 +346,7 @@ const About = () => {
                 {hidrologia.map((member, index) => (
                   <Card key={index} className="shadow-elegant border-0 hover:shadow-lg transition-smooth">
                     <CardContent className="p-5 text-center">
-                      <Avatar className="w-14 h-14 mx-auto mb-3">
+                      <Avatar className="w-18 h-18 mx-auto mb-3">
                         <AvatarImage src={member.photo ? teamSrc(member.photo) : undefined} />
                         <AvatarFallback className="bg-secondary text-secondary-foreground text-sm font-semibold">
                           {member.initials}
@@ -360,7 +364,7 @@ const About = () => {
               </div>
             </div>
 
-            {}
+            {/* Hidráulica */}
             <div className="mb-12">
               <h3 className="text-2xl font-semibold text-primary mb-8 text-center">
                 Hidráulica
@@ -369,7 +373,7 @@ const About = () => {
                 {hidraulica.map((member, index) => (
                   <Card key={index} className="shadow-elegant border-0 hover:shadow-lg transition-smooth">
                     <CardContent className="p-5 text-center">
-                      <Avatar className="w-14 h-14 mx-auto mb-3">
+                      <Avatar className="w-18 h-18 mx-auto mb-3">
                         <AvatarImage src={member.photo ? teamSrc(member.photo) : undefined} />
                         <AvatarFallback className="bg-accent text-accent-foreground text-sm font-semibold">
                           {member.initials}
@@ -388,7 +392,7 @@ const About = () => {
             </div>
           </div>
 
-          {}
+          {/* Statistics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
