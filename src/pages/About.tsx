@@ -4,6 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Users, BookOpen, GraduationCap, Calendar } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
+// usa o base do Vite para funcionar no GitHub Pages
 const teamSrc = (file?: string) => (file ? import.meta.env.BASE_URL + "team/" + file : undefined);
 
 const About = () => {
@@ -319,9 +320,10 @@ const About = () => {
                 {coordenacao.map((member, index) => (
                   <Card key={index} className="shadow-elegant border-0 hover:shadow-lg transition-smooth">
                     <CardContent className="p-6 text-center">
-                      <Avatar className="w-20 h-20 mx-auto mb-4">
+                      {/* AUMENTADO: w-24 h-24 */}
+                      <Avatar className="w-24 h-24 mx-auto mb-4">
                         <AvatarImage src={member.photo ? teamSrc(member.photo) : undefined} />
-                        <AvatarFallback className="bg-primary text-primary-foreground text-sm font-semibold">
+                        <AvatarFallback className="bg-primary text-primary-foreground text-base font-semibold">
                           {member.initials}
                         </AvatarFallback>
                       </Avatar>
@@ -346,7 +348,8 @@ const About = () => {
                 {hidrologia.map((member, index) => (
                   <Card key={index} className="shadow-elegant border-0 hover:shadow-lg transition-smooth">
                     <CardContent className="p-5 text-center">
-                      <Avatar className="w-18 h-18 mx-auto mb-3">
+                      {/* AUMENTADO: w-20 h-20 */}
+                      <Avatar className="w-20 h-20 mx-auto mb-3">
                         <AvatarImage src={member.photo ? teamSrc(member.photo) : undefined} />
                         <AvatarFallback className="bg-secondary text-secondary-foreground text-sm font-semibold">
                           {member.initials}
@@ -373,7 +376,8 @@ const About = () => {
                 {hidraulica.map((member, index) => (
                   <Card key={index} className="shadow-elegant border-0 hover:shadow-lg transition-smooth">
                     <CardContent className="p-5 text-center">
-                      <Avatar className="w-18 h-18 mx-auto mb-3">
+                      {/* AUMENTADO: w-20 h-20 */}
+                      <Avatar className="w-20 h-20 mx-auto mb-3">
                         <AvatarImage src={member.photo ? teamSrc(member.photo) : undefined} />
                         <AvatarFallback className="bg-accent text-accent-foreground text-sm font-semibold">
                           {member.initials}
