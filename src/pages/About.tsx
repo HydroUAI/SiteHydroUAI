@@ -198,7 +198,6 @@ const About = () => {
     },
     {
       name: "Pedro Orsini Cotta",
-      photo: "Pedro Dias.jpg",
       description:
         "Graduando em Engenharia Civil, pesquisa aplicação de IA em redes de distribuição para detecção de vazamentos",
       initials: "PC",
@@ -215,7 +214,7 @@ const About = () => {
       description:
         "Pesquisa no uso de machine learning para previsão de estado de funcionamento de redes de abastecimento",
       initials: "RF",
-      photo: "Rafael Barreto.heic",
+      photo: "Rafael Barreto.jpg",
     },
     {
       name: "Rui Gabriel Modesto de Souza",
