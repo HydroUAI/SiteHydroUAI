@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Hydro-UAI</title>
+
+    <!-- RESTAURA A ROTA SALVA PELO 404.HTML -->
+    <script>
+      (function () {
+        try {
+          var r = sessionStorage.getItem("redirect");
+          if (r) {
+            sessionStorage.removeItem("redirect");
+            var u = new URL(r, location.origin);
+            history.replaceState(null, "", u);
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Vite bundle -->
+    <script type="module" src="/SiteHydroUAI/assets/index.js"></script>
+  </body>
+</html>
