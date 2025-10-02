@@ -23,29 +23,34 @@ const About = () => {
   {
     "name": "Bruno Melo Brentan",
     "description": " ",
-    "initials": "BB"
+    "initials": "BB",
+    "photo": "Bruno Brentan.jpg"
   },
   {
     "name": "Gustavo Meirelles Lima",
     "description": " ",
-    "initials": "GL"
+    "initials": "GL",
+    "photo": "Gustavo.jpg"
   },
   {
     "name": "André Ferreira Rodrigues",
     "description": " ",
-    "initials": "AR"
+    "initials": "AR",
+    "photo": "Andre.jpg"
   },
   {
     "name": "Rodrigo Perdigão Gomes Bezerra",
     "description": " ",
-    "initials": "RB"
+    "initials": "RB",
+    "photo": "Rodrigo.jpg"
   }
 ];
   const hidrologia = [
   {
     "name": "Anna Flávia Almeida Perini",
     "description": " ",
-    "initials": "AP"
+    "initials": "AP",
+    "photo": "AnnaPerini.jpg"
   },
   {
     "name": "Bibiana Niederauer Soares",
@@ -60,7 +65,8 @@ const About = () => {
   {
     "name": "Ernesto José Garcia Canellas",
     "description": " ",
-    "initials": "EC"
+    "initials": "EC",
+    "photo": "Ernesto.jpg"
   },
   {
     "name": "Felipe Emanuel Domiciano Ribeiro",
@@ -70,17 +76,20 @@ const About = () => {
   {
     "name": "Gabriel Rodrigues Pereira",
     "description": " ",
-    "initials": "GP"
+    "initials": "GP",
+    "photo": "Gabriela.jpg"
   },
   {
     "name": "Gabriela Modesto Azevedo",
     "description": " ",
-    "initials": "GA"
+    "initials": "GA",
+    "photo": "Gabriela.jpg"
   },
   {
     "name": "Isabela Zini de Oliveira",
     "description": " ",
-    "initials": "IO"
+    "initials": "IO",
+    "photo": "Jordana Madeira.jpg"
   },
   {
     "name": "Júlia Camarano Lüdtke",
@@ -90,22 +99,26 @@ const About = () => {
   {
     "name": "Lorena Grochowski Sabino dos Santos",
     "description": " ",
-    "initials": "LS"
+    "initials": "LS",
+    "photo": "Lorena.jpg"
   },
   {
     "name": "Marina Marcela de Paula Kolanski",
     "description": " ",
-    "initials": "MK"
+    "initials": "MK",
+    "photo": "Marina Kolanski.jpg"
   },
   {
     "name": "Pedro Henrique Bernardes Solha",
     "description": " ",
-    "initials": "PS"
+    "initials": "PS",
+    "photo": "Pedro Solha.jpg"
   },
   {
     "name": "Taís Fonte Boa de Campos Maia",
     "description": " ",
-    "initials": "TM"
+    "initials": "TM",
+    "photo": "Taís Fonte Boa.jpg"
   }
 ];
   const hidraulica = [
@@ -132,7 +145,8 @@ const About = () => {
   {
     "name": "Henrique Di Bernardo Dantas",
     "description": " ",
-    "initials": "HD"
+    "initials": "HD",
+    "photo": "Pedro Dias.jpg"
   },
   {
     "name": "Jéssica Soares Pereira Gonçalves",
@@ -142,7 +156,8 @@ const About = () => {
   {
     "name": "Jordana Madeira Alaggio Ribeiro",
     "description": " ",
-    "initials": "JR"
+    "initials": "JR",
+    "photo": "Jordana Madeira.jpg"
   },
   {
     "name": "Leandro Alves Evangelista",
@@ -152,42 +167,50 @@ const About = () => {
   {
     "name": "Marina Vilaça Mendonça",
     "description": " ",
-    "initials": "MM"
+    "initials": "MM",
+    "photo": "Marina Kolanski.jpg"
   },
   {
     "name": "Pedro Orsini Cotta",
     "description": " ",
-    "initials": "PC"
+    "initials": "PC",
+    "photo": "Pedro Dias.jpg"
   },
   {
     "name": "Pedro Vasconcellos Diaz",
     "description": " ",
-    "initials": "PD"
+    "initials": "PD",
+    "photo": "Pedro Dias.jpg"
   },
   {
     "name": "Rafael Barreto Ferreira",
     "description": " ",
-    "initials": "RF"
+    "initials": "RF",
+    "photo": "Rafael Barreto.jpg"
   },
   {
     "name": "Rui Gabriel Modesto de Souza",
     "description": " ",
-    "initials": "RS"
+    "initials": "RS",
+    "photo": "Gabriela.jpg"
   },
   {
     "name": "Talles Luca Silva Matos",
     "description": " ",
-    "initials": "TM"
+    "initials": "TM",
+    "photo": "Talles.jpg"
   },
   {
     "name": "Thiago Henrique da Silva Lima",
     "description": " ",
-    "initials": "TL"
+    "initials": "TL",
+    "photo": "Jordana Madeira.jpg"
   },
   {
     "name": "Thomaz Felipe de Freitas Anchieta",
     "description": " ",
-    "initials": "TA"
+    "initials": "TA",
+    "photo": "Jordana Madeira.jpg"
   }
 ];
 
