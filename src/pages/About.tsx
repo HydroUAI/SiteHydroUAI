@@ -1,10 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
-
-// constrói URL correta considerando base do GitHub Pages
-const teamSrc = (file?: string) =>
-  file ? `${import.meta.env.BASE_URL}team/${file}` : undefined;
 
 type Member = {
   name: string;
@@ -13,7 +8,51 @@ type Member = {
   photo?: string;
 };
 
-const About = () => {
+// Monta caminho seguro para GitHub Pages (usa BASE_URL)
+const teamSrc = (file?: string) =>
+  file ? `${import.meta.env.BASE_URL}team/${file}` : undefined;
+
+// Card simples, sem alturas fixas, evitando clipping/overlay
+function PersonCard({ m, big = false }: { m: Member; big?: boolean }) {
+  const size = big ? "w-36 h-36" : "w-28 h-28";
+
+  const showFallback = (el: HTMLImageElement) => {
+    // esconde a imagem quebrada e mostra o fallback (iniciais)
+    const fallback = el.nextElementSibling as HTMLElement | null;
+    el.style.display = "none";
+    if (fallback) fallback.style.display = "flex";
+  };
+
+  return (
+    <Card className="p-4 flex flex-col items-center text-center gap-3 shadow-sm hover:shadow-md transition">
+      <div className={`relative ${size} rounded-full overflow-hidden ring-1 ring-muted`}>
+        {m.photo ? (
+          <img
+            src={teamSrc(m.photo)}
+            alt={m.name}
+            loading="lazy"
+            className="w-full h-full object-cover"
+            onError={(e) => showFallback(e.currentTarget)}
+          />
+        ) : null}
+        {/* fallback inicial oculto até erro da imagem */}
+        <div
+          className="absolute inset-0 hidden items-center justify-center bg-primary text-primary-foreground font-semibold"
+          aria-hidden="true"
+        >
+          {m.initials}
+        </div>
+      </div>
+
+      <div className="space-y-1">
+        <h3 className="font-semibold leading-snug">{m.name}</h3>
+        <p className="text-sm text-muted-foreground">{m.description}</p>
+      </div>
+    </Card>
+  );
+}
+
+export default function About() {
   const { t } = useLanguage?.() ?? { t: (s: string) => s };
 
   const coordenacao: Member[] = [
@@ -75,56 +114,18 @@ const About = () => {
       photo: "Ernesto.jpg",
     },
     {
-      name: "Gabriel Rodrigues Pereira",
+      name: "Rafael Barreto",
       description:
-        "Modelagem hidrológica de eventos extremos, previsão de vazões e estudo de Soluções Baseadas na Natureza (SBNs)",
-      initials: "GP",
+        "Pesquisador na área de hidrologia e hidráulica, com foco em modelagem matemática de escoamento e previsão de cheias",
+      initials: "RB",
+      photo: "Rafael Barreto.jpg",
     },
     {
-      name: "Gabriela Modesto Azevedo",
+      name: "Marina Vilaça Mendonça",
       description:
-        "Modelagem hidrológica com uso de redes neurais aplicada à bacia do Rio Negro, na Amazônia",
-      initials: "GA",
-      photo: "Gabriela.jpg",
-    },
-    {
-      name: "Isabela Zini de Oliveira",
-      description:
-        "Pesquisa científica focada em sistemas de previsão de inundação com utilização de redes neurais",
-      initials: "IO",
-    },
-    {
-      name: "Júlia Camarano Lüdtke",
-      description:
-        "Estudos de extremos hidrológicos na bacia do Rio Madeira, com ênfase na ocorrência de secas",
-      initials: "JL",
-    },
-    {
-      name: "Lorena Grochowski Sabino dos Santos",
-      description: "Iniciação científica na área de hidrogeologia",
-      initials: "LS",
-      photo: "Lorena.jpg",
-    },
-    {
-      name: "Marina Marcela de Paula Kolanski",
-      description:
-        "Engenheira ambiental, mestranda pelo programa SMARH da UFMG, com foco em eventos extremos e modelagem hidrológica",
-      initials: "MK",
-      photo: "Marina Kolanski.jpg",
-    },
-    {
-      name: "Pedro Henrique Bernardes Solha",
-      description:
-        "Modelagem hidrológica com redes neurais artificiais, previsão de inundações, inteligência artificial explicável",
-      initials: "PS",
-      photo: "Pedro Solha.jpg",
-    },
-    {
-      name: "Taís Fonte Boa de Campos Maia",
-      description:
-        "Engenheira ambiental, mestranda em hidrologia com ênfase em IA e aprendizado de máquina para modelagem hidrológica",
-      initials: "TM",
-      photo: "Taís Fonte Boa.jpg",
+        "Doutoranda em Engenharia de Recursos Hídricos, com foco em hidrologia estatística e séries temporais",
+      initials: "MV",
+      photo: "Marina.jpg",
     },
   ];
 
@@ -225,58 +226,34 @@ const About = () => {
     },
   ];
 
-  // render genérico com Avatar; sem altura fixa para evitar clipping/corte
-  const renderMember = (m: Member, avatarSize: "lg" | "md" = "md") => {
-    const size = avatarSize === "lg" ? "w-24 h-24" : "w-20 h-20";
-    return (
-      <Card key={m.name} className="shadow-lg">
-        <CardContent className="p-4 flex flex-col items-center text-center gap-3">
-          <Avatar className={`${size}`}>
-            <AvatarImage
-              src={teamSrc(m.photo)}
-              alt={m.name}
-              onError={(e) => {
-                // esconde imagem quebrada para mostrar fallback
-                (e.target as HTMLImageElement).style.display = "none";
-              }}
-            />
-            <AvatarFallback className="bg-primary text-primary-foreground text-lg">
-              {m.initials}
-            </AvatarFallback>
-          </Avatar>
-          <div className="space-y-1">
-            <h3 className="font-semibold leading-snug">{m.name}</h3>
-            <p className="text-sm text-muted-foreground">{m.description}</p>
-          </div>
-        </CardContent>
-      </Card>
-    );
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <section className="py-10">
-        <div className="container max-w-6xl mx-auto px-4">
+        <div className="container max-w-7xl mx-auto px-4">
           <h1 className="text-4xl font-bold text-center mb-10">Nossa Equipe</h1>
 
           <h2 className="text-2xl font-semibold mb-4">Coordenação</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-            {coordenacao.map((m) => renderMember(m, "lg"))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mb-10">
+            {coordenacao.map((m) => (
+              <PersonCard key={m.name} m={m} big />
+            ))}
           </div>
 
           <h2 className="text-2xl font-semibold mb-4">Hidrologia</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-            {hidrologia.map((m) => renderMember(m, "md"))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-10">
+            {hidrologia.map((m) => (
+              <PersonCard key={m.name} m={m} />
+            ))}
           </div>
 
           <h2 className="text-2xl font-semibold mb-4">Hidráulica</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {hidraulica.map((m) => renderMember(m, "md"))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {hidraulica.map((m) => (
+              <PersonCard key={m.name} m={m} />
+            ))}
           </div>
         </div>
       </section>
     </div>
   );
-};
-
-export default About;
+}
