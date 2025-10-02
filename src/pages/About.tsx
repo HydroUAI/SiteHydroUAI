@@ -5,192 +5,242 @@ import { Users, BookOpen, GraduationCap, Calendar } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const teamSrc = (file?: string) => (file ? `/team/${file}` : undefined);
+
 const About = () => {
   const { t } = useLanguage();
-  
+
   const researchAreas = [
-    t('about.research.hydraulics'),
-    t('about.research.hydrology'),
-    t('about.research.ai'),
-    t('about.research.modeling'),
-    t('about.research.optimization'),
-    t('about.research.prediction'),
-    t('about.research.management'),
-    t('about.research.sustainability')
+    t("about.research.hydraulics"),
+    t("about.research.hydrology"),
+    t("about.research.ai"),
+    t("about.research.modeling"),
+    t("about.research.optimization"),
+    t("about.research.prediction"),
+    t("about.research.management"),
+    t("about.research.sustainability"),
   ];
 
   const coordenacao = [
     {
       name: "Bruno Melo Brentan",
-      description: "Especialista em Hidroinformática, com experiência em análise de sistemas de abastecimento de água. Aplica IA e otimização em diversos sistemas de recursos hídricos",
+      description:
+        "Especialista em Hidroinformática, com experiência em análise de sistemas de abastecimento de água. Aplica IA e otimização em diversos sistemas de recursos hídricos",
       initials: "BB",
-      /* image removed */, photo: "Bruno Brentan.jpg"},
+      photo: "Bruno Brentan.jpg",
+    },
     {
-      name: "Gustavo Meirelles Lima", photo: "Gustavo.jpg", , 
-      description: "Otimização e modelagem hidráulica em sistemas de abastecimento de água e usinas hidrelétricas",
+      name: "Gustavo Meirelles Lima",
+      description:
+        "Otimização e modelagem hidráulica em sistemas de abastecimento de água e usinas hidrelétricas",
       initials: "GM",
-      /* image removed */},
+      photo: "Gustavo.jpg",
+    },
     {
-      name: "André Ferreira Rodrigues", photo: "Andre.jpg", ,
-      description: "Doutor em Recursos Hídricos com atuação em hidrologia, modelagem de eventos extremos e aplicação de IA em hidrologia",
+      name: "André Ferreira Rodrigues",
+      description:
+        "Doutor em Recursos Hídricos com atuação em hidrologia, modelagem de eventos extremos e aplicação de IA em hidrologia",
       initials: "AR",
-      /* image removed */},
+      photo: "Andre.jpg",
+    },
     {
-      name: "Rodrigo Perdigão Gomes Bezerra", photo: "Rodrigo.jpg", ,
-      description: "Sistemas de previsão de inundação com utilização de redes neurais e modelagem hidrodinâmica de rápido processamento",
+      name: "Rodrigo Perdigão Gomes Bezerra",
+      description:
+        "Sistemas de previsão de inundação com utilização de redes neurais e modelagem hidrodinâmica de rápido processamento",
       initials: "RP",
-      /* image removed */}
+      photo: "Rodrigo.jpg",
+    },
   ];
 
   const hidrologia = [
     {
-      name: "Anna Flávia Almeida Perini", photo: "AnnaPerini.jpg", ,
-      description: "Doutoranda em Recursos Hídricos, com atuação em hidrologia, desenvolvendo pesquisas relacionadas aos impactos e à dinâmica dos eventos de seca",
-      initials: "AP"
+      name: "Anna Flávia Almeida Perini",
+      photo: "AnnaPerini.jpg",
+      description:
+        "Doutoranda em Recursos Hídricos, com atuação em hidrologia, desenvolvendo pesquisas relacionadas aos impactos e à dinâmica dos eventos de seca",
+      initials: "AP",
     },
     {
       name: "Bibiana Niederauer Soares",
-      description: "Engenheira civil com ampla experiência em projetos de recursos hídricos, como drenagem superficial, reservatórios e modelagem hidráulica",
-      initials: "BS"
+      description:
+        "Engenheira civil com ampla experiência em projetos de recursos hídricos, como drenagem superficial, reservatórios e modelagem hidráulica",
+      initials: "BS",
     },
     {
       name: "David Jimenez Osorio",
-      description: "Especialista em modelagem hidrológica em contextos de mudanças climáticas e modelagem hidrodinâmica",
-      initials: "DJ"
+      description:
+        "Especialista em modelagem hidrológica em contextos de mudanças climáticas e modelagem hidrodinâmica",
+      initials: "DJ",
     },
     {
-      name: "Ernesto José Garcia Canellas", photo: "Ernesto.jpg", ,
-      description: "Graduando em Engenharia Ambiental com iniciação científica em modelagem hidrológica aplicada no Rio Grande do Sul",
-      initials: "EC"
+      name: "Ernesto José Garcia Canellas",
+      photo: "Ernesto.jpg",
+      description:
+        "Graduando em Engenharia Ambiental com iniciação científica em modelagem hidrológica aplicada no Rio Grande do Sul",
+      initials: "EC",
     },
     {
       name: "Felipe Emanuel Domiciano Ribeiro",
-      description: "Engenheiro e Desenvolvedor de software com foco na automatização de processos e computação de alto desempenho",
-      initials: "FD"
+      description:
+        "Engenheiro e Desenvolvedor de software com foco na automatização de processos e computação de alto desempenho",
+      initials: "FD",
     },
     {
       name: "Gabriel Rodrigues Pereira",
-      description: "Modelagem hidrológica de eventos extremos, previsão de vazões e estudo de Soluções Baseadas na Natureza (SBNs)",
-      initials: "GP"
+      description:
+        "Modelagem hidrológica de eventos extremos, previsão de vazões e estudo de Soluções Baseadas na Natureza (SBNs)",
+      initials: "GP",
     },
     {
-      name: "Gabriela Modesto Azevedo", photo: "Gabriela.jpg", ,
-      description: "Modelagem hidrológica com uso de redes neurais aplicada à bacia do Rio Negro, na Amazônia",
+      name: "Gabriela Modesto Azevedo",
+      photo: "Gabriela.jpg",
+      description:
+        "Modelagem hidrológica com uso de redes neurais aplicada à bacia do Rio Negro, na Amazônia",
       initials: "GA",
-      /* image removed */},
+    },
     {
       name: "Isabela Zini de Oliveira",
-      description: "Pesquisa científica focada em sistemas de previsão de inundação com utilização de redes neurais",
-      initials: "IO"
+      description:
+        "Pesquisa científica focada em sistemas de previsão de inundação com utilização de redes neurais",
+      initials: "IO",
     },
     {
       name: "Júlia Camarano Lüdtke",
-      description: "Estudos de extremos hidrológicos na bacia do Rio Madeira, com ênfase na ocorrência de secas",
-      initials: "JL"
+      description:
+        "Estudos de extremos hidrológicos na bacia do Rio Madeira, com ênfase na ocorrência de secas",
+      initials: "JL",
     },
     {
-      name: "Lorena Grochowski Sabino dos Santos", photo: "Lorena.jpg", ,
+      name: "Lorena Grochowski Sabino dos Santos",
+      photo: "Lorena.jpg",
       description: "Iniciação científica na área de hidrogeologia",
       initials: "LS",
-      /* image removed */},
-    {
-      name: "Marina Marcela de Paula Kolanski", photo: "Marina Kolanski.jpg", ,
-      description: "Engenheira ambiental, mestranda pelo programa SMARH da UFMG, com foco em eventos extremos e modelagem hidrológica",
-      initials: "MK"
     },
     {
-      name: "Pedro Henrique Bernardes Solha", photo: "Pedro Solha.jpg", ,
-      description: "Modelagem hidrológica com redes neurais artificiais, previsão de inundações, inteligência artificial explicável",
-      initials: "PS"
+      name: "Marina Marcela de Paula Kolanski",
+      photo: "Marina Kolanski.jpg",
+      description:
+        "Engenheira ambiental, mestranda pelo programa SMARH da UFMG, com foco em eventos extremos e modelagem hidrológica",
+      initials: "MK",
     },
     {
-      name: "Taís Fonte Boa de Campos Maia", photo: "Taís Fonte Boa.jpg", ,
-      description: "Engenheira ambiental, mestranda em hidrologia com ênfase em IA e aprendizado de máquina para modelagem hidrológica",
-      initials: "TM"
-    }
+      name: "Pedro Henrique Bernardes Solha",
+      photo: "Pedro Solha.jpg",
+      description:
+        "Modelagem hidrológica com redes neurais artificiais, previsão de inundações, inteligência artificial explicável",
+      initials: "PS",
+    },
+    {
+      name: "Taís Fonte Boa de Campos Maia",
+      photo: "Taís Fonte Boa.jpg",
+      description:
+        "Engenheira ambiental, mestranda em hidrologia com ênfase em IA e aprendizado de máquina para modelagem hidrológica",
+      initials: "TM",
+    },
   ];
 
   const hidraulica = [
     {
       name: "Carlos Eduardo Abranches Pacheco",
-      description: "Aluno de graduação de engenharia civil com iniciação científica em modelagem com uso de IA para sistemas e redes hidráulicas",
-      initials: "CP"
+      description:
+        "Aluno de graduação de engenharia civil com iniciação científica em modelagem com uso de IA para sistemas e redes hidráulicas",
+      initials: "CP",
     },
     {
       name: "Daniel Bezerra Barros",
-      description: "Modelagem computacional de redes de distribuição de água, detecção e localização de anomalias e vazamentos",
-      initials: "DB"
+      description:
+        "Modelagem computacional de redes de distribuição de água, detecção e localização de anomalias e vazamentos",
+      initials: "DB",
     },
     {
       name: "Débora Salomé Móller",
-      description: "Modelagem hidráulica de redes e adutoras de água, otimização no dimensionamento de sistemas de abastecimento",
-      initials: "DM"
+      description:
+        "Modelagem hidráulica de redes e adutoras de água, otimização no dimensionamento de sistemas de abastecimento",
+      initials: "DM",
     },
     {
       name: "Filipe Augusto Resende Mota",
-      description: "Pesquisa em transitórios hidráulicos e detecção de vazamentos",
-      initials: "FM"
+      description:
+        "Pesquisa em transitórios hidráulicos e detecção de vazamentos",
+      initials: "FM",
     },
     {
       name: "Henrique Di Bernardo Dantas",
-      description: "Graduando em Engenharia Civil, iniciação científica em hidráulica de sistemas de abastecimento de água",
-      initials: "HD"
+      description:
+        "Graduando em Engenharia Civil, iniciação científica em hidráulica de sistemas de abastecimento de água",
+      initials: "HD",
     },
     {
       name: "Jéssica Soares Pereira Gonçalves",
-      description: "Graduanda em Engenharia Ambiental com iniciação científica em hidráulica de sistemas de abastecimento",
-      initials: "JG"
+      description:
+        "Graduanda em Engenharia Ambiental com iniciação científica em hidráulica de sistemas de abastecimento",
+      initials: "JG",
     },
     {
-      name: "Jordana Madeira Alaggio Ribeiro", photo: "Jordana Madeira.jpg", ,
-      description: "Pesquisa em modelagem hidráulica com ênfase em métodos computacionais e técnicas de IA",
+      name: "Jordana Madeira Alaggio Ribeiro",
+      photo: "Jordana Madeira.jpg",
+      description:
+        "Pesquisa em modelagem hidráulica com ênfase em métodos computacionais e técnicas de IA",
       initials: "JR",
-      /* image removed */},
+    },
     {
       name: "Leandro Alves Evangelista",
-      description: "Modelagem hidráulica e otimização de sistemas de abastecimento de água",
-      initials: "LE"
+      description:
+        "Modelagem hidráulica e otimização de sistemas de abastecimento de água",
+      initials: "LE",
     },
     {
-      name: "Marina Vilaça Mendonça", photo: "Marina Kolanski.jpg", ,
-      description: "Graduanda em Engenharia Ambiental, iniciação científica em sistemas de abastecimento de água e hidráulica",
-      initials: "MV"
+      name: "Marina Vilaça Mendonça",
+      photo: "Marina Kolanski.jpg",
+      description:
+        "Graduanda em Engenharia Ambiental, iniciação científica em sistemas de abastecimento de água e hidráulica",
+      initials: "MV",
     },
     {
-      name: "Pedro Orsini Cotta", photo: "Pedro Dias.jpg", ,
-      description: "Graduando em Engenharia Civil, pesquisa aplicação de IA em redes de distribuição para detecção de vazamentos",
+      name: "Pedro Orsini Cotta",
+      photo: "Pedro Dias.jpg",
+      description:
+        "Graduando em Engenharia Civil, pesquisa aplicação de IA em redes de distribuição para detecção de vazamentos",
       initials: "PC",
-      /* image removed */},
+    },
     {
-      name: "Pedro Vasconcellos Diaz", photo: "Pedro Dias.jpg", ,
-      description: "Graduando em Engenharia Civil, iniciação científica em monitoramento de redes de distribuição com IA",
+      name: "Pedro Vasconcellos Diaz",
+      photo: "Pedro Dias.jpg",
+      description:
+        "Graduando em Engenharia Civil, iniciação científica em monitoramento de redes de distribuição com IA",
       initials: "PD",
-      /* image removed */},
+    },
     {
       name: "Rafael Barreto Ferreira",
-      description: "Pesquisa no uso de machine learning para previsão de estado de funcionamento de redes de abastecimento",
+      description:
+        "Pesquisa no uso de machine learning para previsão de estado de funcionamento de redes de abastecimento",
       initials: "RF",
-      /* image removed */, photo: "Rafael Barreto.heic"},
-    {
-      name: "Rui Gabriel Modesto de Souza",
-      description: "Otimização e modelagem hidráulica em sistemas de abastecimento de água",
-      initials: "RG"
+      photo: "Rafael Barreto.heic",
     },
     {
-      name: "Talles Luca Silva Matos", photo: "Talles.jpg", ,
-      description: "Pesquisador em Engenharia Civil, iniciação científica aplicando IA e técnicas de otimização em redes de água",
-      initials: "TL"
+      name: "Rui Gabriel Modesto de Souza",
+      description:
+        "Otimização e modelagem hidráulica em sistemas de abastecimento de água",
+      initials: "RG",
+    },
+    {
+      name: "Talles Luca Silva Matos",
+      photo: "Talles.jpg",
+      description:
+        "Pesquisador em Engenharia Civil, iniciação científica aplicando IA e técnicas de otimização em redes de água",
+      initials: "TL",
     },
     {
       name: "Thiago Henrique da Silva Lima",
-      description: "Estudante de Engenharia Civil, pesquisa aplicação de IA e ML para previsão de inundações",
-      initials: "TH"
+      description:
+        "Estudante de Engenharia Civil, pesquisa aplicação de IA e ML para previsão de inundações",
+      initials: "TH",
     },
     {
       name: "Thomaz Felipe de Freitas Anchieta",
-      description: "Otimização e modelagem matemático-computacional de redes de distribuição de água",
-      initials: "TF"
-    }
+      description:
+        "Otimização e modelagem matemático-computacional de redes de distribuição de água",
+      initials: "TF",
+    },
   ];
 
   return (
@@ -198,9 +248,9 @@ const About = () => {
       {/* Header */}
       <section className="gradient-hero text-white py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-6">{t('about.title')}</h1>
+          <h1 className="text-5xl font-bold mb-6">{t("about.title")}</h1>
           <p className="text-xl text-primary-foreground/90">
-            {t('about.subtitle')}
+            {t("about.subtitle")}
           </p>
         </div>
       </section>
@@ -211,22 +261,26 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <Card className="shadow-elegant border-0">
               <CardHeader>
-                <CardTitle className="text-2xl text-primary">{t('about.mission.title')}</CardTitle>
+                <CardTitle className="text-2xl text-primary">
+                  {t("about.mission.title")}
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
-                  {t('about.mission.description')}
+                  {t("about.mission.description")}
                 </p>
               </CardContent>
             </Card>
 
             <Card className="shadow-elegant border-0">
               <CardHeader>
-                <CardTitle className="text-2xl text-primary">{t('about.vision.title')}</CardTitle>
+                <CardTitle className="text-2xl text-primary">
+                  {t("about.vision.title")}
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
-                  {t('about.vision.description')}
+                  {t("about.vision.description")}
                 </p>
               </CardContent>
             </Card>
@@ -235,7 +289,9 @@ const About = () => {
           {/* Research Areas */}
           <Card className="shadow-elegant border-0 mb-16">
             <CardHeader>
-              <CardTitle className="text-3xl text-center text-primary">{t('about.research.title')}</CardTitle>
+              <CardTitle className="text-3xl text-center text-primary">
+                {t("about.research.title")}
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-3 justify-center">
@@ -250,23 +306,31 @@ const About = () => {
 
           {/* Team */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center text-primary mb-12">{t('about.team.title')}</h2>
-            
+            <h2 className="text-3xl font-bold text-center text-primary mb-12">
+              {t("about.team.title")}
+            </h2>
+
             {/* Coordenação */}
             <div className="mb-12">
-              <h3 className="text-2xl font-semibold text-primary mb-8 text-center">Coordenação</h3>
+              <h3 className="text-2xl font-semibold text-primary mb-8 text-center">
+                Coordenação
+              </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {coordenacao.map((member, index) => (
                   <Card key={index} className="shadow-elegant border-0 hover:shadow-lg transition-smooth">
                     <CardContent className="p-6 text-center">
-                       <Avatar className="w-16 h-16 mx-auto mb-4">
-                         <AvatarImage src={m.photo ? teamSrc(m.photo) : undefined} />
-                         <AvatarFallback className="bg-primary text-primary-foreground text-sm font-semibold">
-                           {member.initials}
-                         </AvatarFallback>
-                       </Avatar>
-                      <h4 className="text-lg font-semibold text-foreground mb-2">{member.name}</h4>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{member.description}</p>
+                      <Avatar className="w-16 h-16 mx-auto mb-4">
+                        <AvatarImage src={member.photo ? teamSrc(member.photo) : undefined} />
+                        <AvatarFallback className="bg-primary text-primary-foreground text-sm font-semibold">
+                          {member.initials}
+                        </AvatarFallback>
+                      </Avatar>
+                      <h4 className="text-lg font-semibold text-foreground mb-2">
+                        {member.name}
+                      </h4>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        {member.description}
+                      </p>
                     </CardContent>
                   </Card>
                 ))}
@@ -275,19 +339,25 @@ const About = () => {
 
             {/* Hidrologia */}
             <div className="mb-12">
-              <h3 className="text-2xl font-semibold text-primary mb-8 text-center">Hidrologia</h3>
+              <h3 className="text-2xl font-semibold text-primary mb-8 text-center">
+                Hidrologia
+              </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                 {hidrologia.map((member, index) => (
+                {hidrologia.map((member, index) => (
                   <Card key={index} className="shadow-elegant border-0 hover:shadow-lg transition-smooth">
                     <CardContent className="p-5 text-center">
                       <Avatar className="w-14 h-14 mx-auto mb-3">
-                        <AvatarImage src={m.photo ? teamSrc(m.photo) : undefined} />
+                        <AvatarImage src={member.photo ? teamSrc(member.photo) : undefined} />
                         <AvatarFallback className="bg-secondary text-secondary-foreground text-sm font-semibold">
                           {member.initials}
                         </AvatarFallback>
                       </Avatar>
-                      <h4 className="text-base font-semibold text-foreground mb-2">{member.name}</h4>
-                      <p className="text-muted-foreground text-xs leading-relaxed">{member.description}</p>
+                      <h4 className="text-base font-semibold text-foreground mb-2">
+                        {member.name}
+                      </h4>
+                      <p className="text-muted-foreground text-xs leading-relaxed">
+                        {member.description}
+                      </p>
                     </CardContent>
                   </Card>
                 ))}
@@ -296,19 +366,25 @@ const About = () => {
 
             {/* Hidráulica */}
             <div className="mb-12">
-              <h3 className="text-2xl font-semibold text-primary mb-8 text-center">Hidráulica</h3>
+              <h3 className="text-2xl font-semibold text-primary mb-8 text-center">
+                Hidráulica
+              </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                 {hidraulica.map((member, index) => (
+                {hidraulica.map((member, index) => (
                   <Card key={index} className="shadow-elegant border-0 hover:shadow-lg transition-smooth">
                     <CardContent className="p-5 text-center">
                       <Avatar className="w-14 h-14 mx-auto mb-3">
-                        <AvatarImage src={m.photo ? teamSrc(m.photo) : undefined} />
+                        <AvatarImage src={member.photo ? teamSrc(member.photo) : undefined} />
                         <AvatarFallback className="bg-accent text-accent-foreground text-sm font-semibold">
                           {member.initials}
                         </AvatarFallback>
                       </Avatar>
-                      <h4 className="text-base font-semibold text-foreground mb-2">{member.name}</h4>
-                      <p className="text-muted-foreground text-xs leading-relaxed">{member.description}</p>
+                      <h4 className="text-base font-semibold text-foreground mb-2">
+                        {member.name}
+                      </h4>
+                      <p className="text-muted-foreground text-xs leading-relaxed">
+                        {member.description}
+                      </p>
                     </CardContent>
                   </Card>
                 ))}
@@ -323,28 +399,28 @@ const About = () => {
                 <BookOpen className="h-8 w-8 text-primary" />
               </div>
               <div className="text-3xl font-bold text-primary mb-2">15+</div>
-              <div className="text-muted-foreground">{t('about.stats.projects')}</div>
+              <div className="text-muted-foreground">{t("about.stats.projects")}</div>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <GraduationCap className="h-8 w-8 text-primary" />
               </div>
               <div className="text-3xl font-bold text-primary mb-2">50+</div>
-              <div className="text-muted-foreground">{t('about.stats.publications')}</div>
+              <div className="text-muted-foreground">{t("about.stats.publications")}</div>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-primary" />
               </div>
               <div className="text-3xl font-bold text-primary mb-2">20+</div>
-              <div className="text-muted-foreground">{t('about.stats.students')}</div>
+              <div className="text-muted-foreground">{t("about.stats.students")}</div>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Calendar className="h-8 w-8 text-primary" />
               </div>
               <div className="text-3xl font-bold text-primary mb-2">8+</div>
-              <div className="text-muted-foreground">{t('about.stats.years')}</div>
+              <div className="text-muted-foreground">{t("about.stats.years")}</div>
             </div>
           </div>
         </div>
