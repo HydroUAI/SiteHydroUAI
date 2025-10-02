@@ -23,204 +23,171 @@ const About = () => {
   {
     "name": "Bruno Melo Brentan",
     "description": " ",
-    "initials": "BB",
-    "photo": null
+    "initials": "BB"
   },
   {
     "name": "Gustavo Meirelles Lima",
     "description": " ",
-    "initials": "GL",
-    "photo": null
+    "initials": "GL"
   },
   {
     "name": "André Ferreira Rodrigues",
     "description": " ",
-    "initials": "AR",
-    "photo": null
+    "initials": "AR"
   },
   {
     "name": "Rodrigo Perdigão Gomes Bezerra",
     "description": " ",
-    "initials": "RB",
-    "photo": null
+    "initials": "RB"
   }
 ];
   const hidrologia = [
   {
     "name": "Anna Flávia Almeida Perini",
     "description": " ",
-    "initials": "AP",
-    "photo": null
+    "initials": "AP"
   },
   {
     "name": "Bibiana Niederauer Soares",
     "description": " ",
-    "initials": "BS",
-    "photo": null
+    "initials": "BS"
   },
   {
     "name": "David Jimenez Osorio",
     "description": " ",
-    "initials": "DO",
-    "photo": null
+    "initials": "DO"
   },
   {
     "name": "Ernesto José Garcia Canellas",
     "description": " ",
-    "initials": "EC",
-    "photo": null
+    "initials": "EC"
   },
   {
     "name": "Felipe Emanuel Domiciano Ribeiro",
     "description": " ",
-    "initials": "FR",
-    "photo": null
+    "initials": "FR"
   },
   {
     "name": "Gabriel Rodrigues Pereira",
     "description": " ",
-    "initials": "GP",
-    "photo": null
+    "initials": "GP"
   },
   {
     "name": "Gabriela Modesto Azevedo",
     "description": " ",
-    "initials": "GA",
-    "photo": null
+    "initials": "GA"
   },
   {
     "name": "Isabela Zini de Oliveira",
     "description": " ",
-    "initials": "IO",
-    "photo": null
+    "initials": "IO"
   },
   {
     "name": "Júlia Camarano Lüdtke",
     "description": " ",
-    "initials": "JL",
-    "photo": null
+    "initials": "JL"
   },
   {
     "name": "Lorena Grochowski Sabino dos Santos",
     "description": " ",
-    "initials": "LS",
-    "photo": null
+    "initials": "LS"
   },
   {
     "name": "Marina Marcela de Paula Kolanski",
     "description": " ",
-    "initials": "MK",
-    "photo": null
+    "initials": "MK"
   },
   {
     "name": "Pedro Henrique Bernardes Solha",
     "description": " ",
-    "initials": "PS",
-    "photo": null
+    "initials": "PS"
   },
   {
     "name": "Taís Fonte Boa de Campos Maia",
     "description": " ",
-    "initials": "TM",
-    "photo": null
+    "initials": "TM"
   }
 ];
   const hidraulica = [
   {
     "name": "Carlos Eduardo Abranches Pacheco",
     "description": " ",
-    "initials": "CP",
-    "photo": null
+    "initials": "CP"
   },
   {
     "name": "Daniel Bezerra Barros",
     "description": " ",
-    "initials": "DB",
-    "photo": null
+    "initials": "DB"
   },
   {
     "name": "Débora Salomé Móller",
     "description": " ",
-    "initials": "DM",
-    "photo": null
+    "initials": "DM"
   },
   {
     "name": "Filipe Augusto Resende Mota",
     "description": " ",
-    "initials": "FM",
-    "photo": null
+    "initials": "FM"
   },
   {
     "name": "Henrique Di Bernardo Dantas",
     "description": " ",
-    "initials": "HD",
-    "photo": null
+    "initials": "HD"
   },
   {
     "name": "Jéssica Soares Pereira Gonçalves",
     "description": " ",
-    "initials": "JG",
-    "photo": null
+    "initials": "JG"
   },
   {
     "name": "Jordana Madeira Alaggio Ribeiro",
     "description": " ",
-    "initials": "JR",
-    "photo": null
+    "initials": "JR"
   },
   {
     "name": "Leandro Alves Evangelista",
     "description": " ",
-    "initials": "LE",
-    "photo": null
+    "initials": "LE"
   },
   {
     "name": "Marina Vilaça Mendonça",
     "description": " ",
-    "initials": "MM",
-    "photo": null
+    "initials": "MM"
   },
   {
     "name": "Pedro Orsini Cotta",
     "description": " ",
-    "initials": "PC",
-    "photo": null
+    "initials": "PC"
   },
   {
     "name": "Pedro Vasconcellos Diaz",
     "description": " ",
-    "initials": "PD",
-    "photo": null
+    "initials": "PD"
   },
   {
     "name": "Rafael Barreto Ferreira",
     "description": " ",
-    "initials": "RF",
-    "photo": null
+    "initials": "RF"
   },
   {
     "name": "Rui Gabriel Modesto de Souza",
     "description": " ",
-    "initials": "RS",
-    "photo": null
+    "initials": "RS"
   },
   {
     "name": "Talles Luca Silva Matos",
     "description": " ",
-    "initials": "TM",
-    "photo": null
+    "initials": "TM"
   },
   {
     "name": "Thiago Henrique da Silva Lima",
     "description": " ",
-    "initials": "TL",
-    "photo": null
+    "initials": "TL"
   },
   {
     "name": "Thomaz Felipe de Freitas Anchieta",
     "description": " ",
-    "initials": "TA",
-    "photo": null
+    "initials": "TA"
   }
 ];
 

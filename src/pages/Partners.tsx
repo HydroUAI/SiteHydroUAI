@@ -7,17 +7,67 @@ const Partners = () => {
   {
     "name": "Petrobras",
     "url": null,
-    "logo": null
+    "logo": "Petrobras.png"
   },
   {
     "name": "Vale",
     "url": null,
-    "logo": null
+    "logo": "Vale.png"
   },
   {
-    "name": "Deltares",
-    "url": "https://www.deltares.nl/en",
-    "logo": null
+    "name": "EConumerica",
+    "url": null,
+    "logo": "EConumerica.png"
+  },
+  {
+    "name": "Pamplona",
+    "url": null,
+    "logo": "Pamplona.png"
+  },
+  {
+    "name": "Sichuan University",
+    "url": null,
+    "logo": "Sichuan_University_logo_(seal).svg.png"
+  },
+  {
+    "name": "UFC",
+    "url": null,
+    "logo": "UFC.png"
+  },
+  {
+    "name": "UFLA",
+    "url": null,
+    "logo": "ufla.jpg"
+  },
+  {
+    "name": "UFParana",
+    "url": null,
+    "logo": "UFParana.svg"
+  },
+  {
+    "name": "UFPel",
+    "url": null,
+    "logo": "ufpel.png"
+  },
+  {
+    "name": "UFT",
+    "url": null,
+    "logo": "UFT.webp"
+  },
+  {
+    "name": "UnB",
+    "url": null,
+    "logo": "UNB.jpg"
+  },
+  {
+    "name": "UNICAMP",
+    "url": null,
+    "logo": "unicamp.jpg"
+  },
+  {
+    "name": "AIAQUA",
+    "url": null,
+    "logo": "AIAQUA.jpg"
   }
 ];
 
