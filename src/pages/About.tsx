@@ -138,6 +138,43 @@ const hidrologia: Member[] = [
     initials: "MV",
     photo: "Marina.jpg",
   },
+
+  ,{
+    name: "Gabriela Modesto Azevedo",
+    description:
+      "Modelagem hidrológica com uso de redes neurais aplicada à bacia do Rio Negro, na Amazônia",
+    initials: "GA"
+  }
+  ,{
+    name: "Isabela Zini de Oliveira",
+    description:
+      "Pesquisa científica focada em sistemas de previsão de inundação com utilização de redes neurais",
+    initials: "IO"
+  }
+  ,{
+    name: "Júlia Camarano Lüdtke",
+    description:
+      "Estudos de extremos hidrológicos na bacia do Rio Madeira, com ênfase na ocorrência de secas",
+    initials: "JL"
+  }
+  ,{
+    name: "Lorena Grochowski Sabino dos Santos",
+    description:
+      "Iniciação científica na área de hidrogeologia.",
+    initials: "LS"
+  }
+  ,{
+    name: "Marina Marcela de Paula Kolanski",
+    description:
+      "Formada em engenharia ambiental pela UFMG e especialista em estruturas hidráulicas. Atualmente é mestranda pelo programa SMARH da UFMG, com atuação focada em eventos extremos, modelagem hidrológica e teoria de redes complexas",
+    initials: "MK"
+  }
+  ,{
+    name: "Taís Fonte Boa de Campos Maia",
+    description:
+      "Engenheira ambiental formada pela UFMG, com especialização em estruturas hidráulicas. Mestranda pelo programa SMARH/UFMG, desenvolve pesquisa na interface entre hidrologia, eventos extremos e ciência de dados, com ênfase na aplicação de inteligência artificial e aprendizado de máquina para modelagem hidrológica, previsão de vazões e transferibilidade de modelos.",
+    initials: "TM"
+  }
 ];
 
 /* Hidráulica */
@@ -181,6 +218,61 @@ const hidraulica: Member[] = [
     initials: "TL",
     photo: "Talles.jpg",
   },
+
+  ,{
+    name: "Filipe Augusto Resende Mota",
+    description:
+      "Pesquisa em transitório hidráulicos e detecção de vazamentos",
+    initials: "FM"
+  }
+  ,{
+    name: "Henrique Di Bernardo Dantas",
+    description:
+      "aluno de graduação em engenharia civil, iniciação científica em hidráulica de sistemas de abastecimento de agua",
+    initials: "HD"
+  }
+  ,{
+    name: "Jéssica Soares Pereira Gonçalves",
+    description:
+      "Aluna de graduação em Engenharia Ambiental com iniciação científica em hidráulica de sistemas de abastecimento de água.",
+    initials: "JG"
+  }
+  ,{
+    name: "Leandro Alves Evangelista",
+    description:
+      "Modelagem hidráulica e otimização de sistemas de abastecimento de água",
+    initials: "LE"
+  }
+  ,{
+    name: "Pedro Orsini Cotta",
+    description:
+      "Graduando de Engenharia Civil. Está pesquisando aplicação de inteligência artificial em redes de distribuição de água para detecção e prevenção de vazamentos.",
+    initials: "PC"
+  }
+  ,{
+    name: "Rafael Barreto Ferreira",
+    description:
+      "Pesquisa no uso de machine learning para previsão de estado de funcionamento e estado hidráulico de redes de abastecimento de água e aplicação de inteligência artificial explicável para interpretabilidade dos modelos baseados em IA.",
+    initials: "RF"
+  }
+  ,{
+    name: "Rui Gabriel Modesto de Souza",
+    description:
+      "Otimização e modelagem hidráulica em sistemas de abastecimento de água",
+    initials: "RS"
+  }
+  ,{
+    name: "Thiago Henrique da Silva Lima",
+    description:
+      "Estudante de Engenharia Civil. Desenvolvendo pesquisa de Iniciação Científica na aplicação de Inteligência Artificial e Machine Learning para a previsão de inundações e gestão de riscos hídricos.",
+    initials: "TL"
+  }
+  ,{
+    name: "Thomaz Felipe de Freitas Anchieta",
+    description:
+      "Otimização e modelagem matemático-computacional de redes de distribuição de água",
+    initials: "TA"
+  }
 ];
 
 /* Professores Parceiros (SEM FOTO; ordem alfabética) */

@@ -271,21 +271,7 @@ const Publications = () => {
           </TabsContent>
         </Tabs>
 
-        {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <div className="bg-secondary rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-foreground mb-4">
-              Acesso Completo às Publicações
-            </h2>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Para acessar o texto completo de nossas publicações ou solicitar informações 
-              sobre colaborações acadêmicas, entre em contato conosco.
-            </p>
-            <Button className="bg-primary hover:bg-primary-dark">
-              Solicitar Acesso
-            </Button>
-          </div>
-        </div>
+        {
       </div>
     </div>
   );

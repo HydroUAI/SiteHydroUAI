@@ -241,9 +241,7 @@ const Projects = () => {
               Estamos sempre abertos a parcerias e colaborações em pesquisa. 
               Entre em contato para discutir oportunidades de trabalho conjunto.
             </p>
-            <Button className="bg-primary hover:bg-primary-dark">
-              Entrar em Contato
-            </Button>
+            <Link to="/contact"><Button className="bg-primary hover:bg-primary-dark">Fale Conosco</Button></Link>
           </div>
         </div>
       </div>
