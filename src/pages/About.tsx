@@ -70,6 +70,18 @@ const hidraulica: Member[] = [
     { name: "Thomaz Felipe de Freitas Anchieta", description: "Otimiza\u00e7\u00e3o e modelagem matem\u00e1tico-computacional de redes de distribui\u00e7\u00e3o de \u00e1gua", initials: "TA" }
 ];
 
+const professoresParceiros: Member[] = [
+  { name: "Andrea Menapace", description: "Especialista em hidroinformática", initials: "AM" },
+  { name: "Carlos Rogério", description: "Ampla atuação na área de hidrologia, hidrologia florestal e solos", initials: "CR" },
+  { name: "Edevar Luvizotto", description: "Especialista em hidráulica de condutos forçados", initials: "EL" },
+  { name: "Hugo Fagundes", description: "Atuação em modelagem hidrológica e transporte de sedimentos", initials: "HF" },
+  { name: "Iran Lima", description: "Atuação em qualidade de água e drenagem", initials: "IL" },
+  { name: "Julian Eleutério", description: "Atuação em modelagem de inundações e rompimentos de barragens", initials: "JE" },
+  { name: "Manuel Herrera", description: "Especialista em hidroinformática", initials: "MH" },
+  { name: "Samuel Belskow", description: "Atuação em modelagem de inundações", initials: "SB" },
+];
+
+
 export default function About() {
   return (
     <div className="min-h-screen bg-background">
@@ -90,7 +102,16 @@ export default function About() {
           <h2 className="text-2xl font-semibold mb-4">Hidráulica</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {hidraulica.map((m) => (<PersonCard key={m.name} m={m} />))}
+          
+          <h2 className="text-2xl font-semibold mb-4">Professores Parceiros</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-10">
+            {professoresParceiros
+              .slice() // shallow copy
+              .sort((a, b) => a.name.localeCompare(b.name))
+              .map((m) => (<PersonCard key={m.name} m={m} />))}
           </div>
+
+</div>
         </div>
       </section>
     </div>
