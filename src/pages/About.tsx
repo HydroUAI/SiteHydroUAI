@@ -125,21 +125,6 @@ const hidrologia: Member[] = [
     photo: "Ernesto.jpg",
   },
   {
-    name: "Rafael Barreto",
-    description:
-      "Pesquisa no uso de machine learning para previsão de estado de funcionamento e estado hidráulico de redes de abastecimento de água e aplicação de inteligência artificial explicável para interpretabilidade dos modelos baseados em IA.",
-    initials: "RB",
-    photo: "Rafael Barreto.jpg",
-  },
-  {
-    name: "Marina Vilaça Mendonça",
-    description:
-      "Aluna de graduação em engenharia ambiental, desenvolvendo iniciação científica na área de sistemas de abastecimento de água e hidráulica.",
-    initials: "MV",
-    photo: "Marina.jpg",
-  },
-
-  ,{
     name: "Gabriela Modesto Azevedo",
     description:
       "Modelagem hidrológica com uso de redes neurais aplicada à bacia do Rio Negro, na Amazônia",
@@ -205,11 +190,25 @@ const hidraulica: Member[] = [
     photo: "Jordana Madeira.jpg",
   },
   {
+    name: "Marina Vilaça Mendonça",
+    description:
+      "Aluna de graduação em engenharia ambiental, desenvolvendo iniciação científica na área de sistemas de abastecimento de água e hidráulica.",
+    initials: "MV",
+    photo: "Marina.jpg",
+  },
+  {
     name: "Pedro Vasconcellos Diaz",
     description:
       "Graduando em Engenharia Civil, iniciação científica em monitoramento de redes de distribuição com IA",
     initials: "PD",
     photo: "Pedro Dias.jpg",
+  },
+    {
+    name: "Rafael Barreto",
+    description:
+      "Pesquisa no uso de machine learning para previsão de estado de funcionamento e estado hidráulico de redes de abastecimento de água e aplicação de inteligência artificial explicável para interpretabilidade dos modelos baseados em IA.",
+    initials: "RB",
+    photo: "Rafael Barreto.jpg",
   },
   {
     name: "Talles Luca Silva Matos",
@@ -217,8 +216,7 @@ const hidraulica: Member[] = [
       "Pesquisador em Engenharia Civil, iniciação científica aplicando IA e técnicas de otimização em redes de água",
     initials: "TL",
     photo: "Talles.jpg",
-  },
-
+  }
   ,{
     name: "Filipe Augusto Resende Mota",
     description:
@@ -248,12 +246,6 @@ const hidraulica: Member[] = [
     description:
       "Graduando de Engenharia Civil. Está pesquisando aplicação de inteligência artificial em redes de distribuição de água para detecção e prevenção de vazamentos.",
     initials: "PC"
-  }
-  ,{
-    name: "Rafael Barreto Ferreira",
-    description:
-      "Pesquisa no uso de machine learning para previsão de estado de funcionamento e estado hidráulico de redes de abastecimento de água e aplicação de inteligência artificial explicável para interpretabilidade dos modelos baseados em IA.",
-    initials: "RF"
   }
   ,{
     name: "Rui Gabriel Modesto de Souza",
