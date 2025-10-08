@@ -1,30 +1,44 @@
 import React from "react";
 
-// Ajuste o caminho se você usa i18n (ex.: import { useTranslation } from "react-i18next")
-// e aplique t('...') nos textos necessários, se quiser.
-// Aqui deixei textos estáticos para evitar dependências.
-
 type Member = {
   name: string;
   description: string;
   initials: string;
-  photo?: string; // caminho relativo em /public/team
+  photo?: string; // nome do arquivo dentro de /public/team
 };
 
 /**
- * PersonCard
- * - Mantém exatamente o MESMO tamanho visual para cartões com e sem foto.
- * - Para quem NÃO tem foto, exibe as iniciais dentro de um avatar do MESMO tamanho (h-24 w-24).
- * - Use este card em TODAS as seções para padronizar.
+ * PersonCard unificado
+ * - Mantém exatamente o MESMO tamanho (com e sem foto)
+ * - Normaliza o caminho para fotos (prefixa /team quando necessário)
+ * - Usa encodeURI para nomes com espaços/acentos
+ * - Fallback automático para iniciais quando a imagem falhar
  */
 function PersonCard({ m }: { m: Member }) {
+  const [broken, setBroken] = React.useState(false);
+
+  // Se vier caminho absoluto/URL, usa como está; caso contrário, prefixa /team/
+  const rawSrc =
+    m.photo && (m.photo.startsWith("/") || m.photo.startsWith("http"))
+      ? m.photo
+      : m.photo
+      ? `/team/${m.photo}`
+      : undefined;
+
+  // Codifica espaços/acentos (ex.: "Bruno Brentan.jpg")
+  const photoSrc = rawSrc ? encodeURI(rawSrc) : undefined;
+
+  const showAvatar = Boolean(photoSrc && !broken);
+
   return (
     <div className="rounded-xl border bg-white p-6 shadow-sm hover:shadow-md transition flex flex-col items-center justify-start min-h-[300px]">
-      {m.photo ? (
+      {showAvatar ? (
         <img
-          src={m.photo.startsWith("/") ? m.photo : `/team/${m.photo}`}
+          src={photoSrc}
           alt={m.name}
           className="h-24 w-24 rounded-full object-cover mb-4"
+          loading="lazy"
+          onError={() => setBroken(true)}
         />
       ) : (
         <div className="h-24 w-24 mb-4 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xl font-semibold">
@@ -40,7 +54,7 @@ function PersonCard({ m }: { m: Member }) {
   );
 }
 
-/* ================ Exemplo de listas (ajuste para as suas atuais) ================ */
+/* ===================== LISTAS (ajuste conforme o seu arquivo atual) ===================== */
 /* Coordenação */
 const coordenacao: Member[] = [
   {
@@ -69,11 +83,11 @@ const coordenacao: Member[] = [
     description:
       "Sistemas de previsão de inundação com utilização de redes neurais e modelagem hidrodinâmica de rápido processamento",
     initials: "RB",
-    photo: "UNB.jpg", // ajuste se você tiver a foto do Rodrigo
+    photo: "Rodrigo.jpg",
   },
 ];
 
-/* Hidrologia (exemplo reduzido; mantenha os seus itens atuais se já tem) */
+/* Hidrologia (exemplos; mantenha todos os seus itens atuais) */
 const hidrologia: Member[] = [
   {
     name: "Anna Flávia Almeida Perini",
@@ -83,11 +97,18 @@ const hidrologia: Member[] = [
     photo: "AnnaPerini.jpg",
   },
   {
+    name: "Bibiana Niederauer Soares",
+    description:
+      "Engenheira civil com ampla experiência em projetos de recursos hídricos, como drenagem superficial, reservatórios e modelagem hidráulica",
+    initials: "BS",
+    photo: "Bibiana.jpg",
+  },
+  {
     name: "David Jimenez Osorio",
     description:
       "Especialista em modelagem hidrológica em contextos de mudanças climáticas e modelagem hidrodinâmica",
     initials: "DJ",
-    // sem foto -> iniciais
+    photo: "David.jpg",
   },
   {
     name: "Ernesto José Garcia Canellas",
@@ -107,74 +128,64 @@ const hidrologia: Member[] = [
     name: "Marina Vilaça Mendonça",
     description:
       "Doutoranda em Engenharia de Recursos Hídricos, com foco em hidrologia estatística e séries temporais",
-    initials: "MM",
+    initials: "MV",
     photo: "Marina.jpg",
   },
 ];
 
-/* Hidráulica (exemplo reduzido; ajuste conforme suas listas) */
+/* Hidráulica (exemplos; mantenha todos os seus itens atuais) */
 const hidraulica: Member[] = [
   {
-    name: "Gabriel Rodrigues Pereira",
+    name: "Carlos Eduardo Abranches Pacheco",
     description:
-      "Atuação em hidráulica computacional aplicada a simulação de escoamentos",
-    initials: "GP",
-    // sem foto
+      "Aluno de graduação de engenharia civil com iniciação científica em modelagem com uso de IA para sistemas e redes hidráulicas",
+    initials: "CP",
   },
   {
-    name: "Isabela Zini de Oliveira",
+    name: "Daniel Bezerra Barros",
     description:
-      "Atuação em hidráulica e hidrodinâmica de canais e redes",
-    initials: "IO",
-    // sem foto
+      "Modelagem computacional de redes de distribuição de água, detecção e localização de anomalias e vazamentos",
+    initials: "DB",
+  },
+  {
+    name: "Débora Salomé Móller",
+    description:
+      "Modelagem hidráulica de redes e adutoras de água, otimização no dimensionamento de sistemas de abastecimento",
+    initials: "DM",
+  },
+  {
+    name: "Jordana Madeira Alaggio Ribeiro",
+    description:
+      "Pesquisa em modelagem hidráulica com ênfase em métodos computacionais e técnicas de IA",
+    initials: "JR",
+    photo: "Jordana Madeira.jpg",
+  },
+  {
+    name: "Pedro Vasconcellos Diaz",
+    description:
+      "Graduando em Engenharia Civil, iniciação científica em monitoramento de redes de distribuição com IA",
+    initials: "PD",
+    photo: "Pedro Dias.jpg",
+  },
+  {
+    name: "Talles Luca Silva Matos",
+    description:
+      "Pesquisador em Engenharia Civil, iniciação científica aplicando IA e técnicas de otimização em redes de água",
+    initials: "TL",
+    photo: "Talles.jpg",
   },
 ];
 
-/* ================ NOVA SEÇÃO: Professores Parceiros (SEM FOTO) ================ */
+/* Professores Parceiros (SEM FOTO; ordem alfabética) */
 const professoresParceiros: Member[] = [
-  {
-    name: "Andrea Menapace",
-    description: "Especialista em hidroinformática",
-    initials: "AM",
-  },
-  {
-    name: "Carlos Rogério",
-    description:
-      "Ampla atuação na área de hidrologia, hidrologia florestal e solos",
-    initials: "CR",
-  },
-  {
-    name: "Edevar Luvizotto",
-    description: "Especialista em hidráulica de condutos forçados",
-    initials: "EL",
-  },
-  {
-    name: "Hugo Fagundes",
-    description:
-      "Atuação em modelagem hidrológica e transporte de sedimentos",
-    initials: "HF",
-  },
-  {
-    name: "Iran Lima",
-    description: "Atuação em qualidade de água e drenagem",
-    initials: "IL",
-  },
-  {
-    name: "Julian Eleutério",
-    description:
-      "Atuação em modelagem de inundações e rompimentos de barragens",
-    initials: "JE",
-  },
-  {
-    name: "Manuel Herrera",
-    description: "Especialista em hidroinformática",
-    initials: "MH",
-  },
-  {
-    name: "Samuel Belskow",
-    description: "Atuação em modelagem de inundações",
-    initials: "SB",
-  },
+  { name: "Andrea Menapace", description: "Especialista em hidroinformática", initials: "AM" },
+  { name: "Carlos Rogério", description: "Ampla atuação na área de hidrologia, hidrologia florestal e solos", initials: "CR" },
+  { name: "Edevar Luvizotto", description: "Especialista em hidráulica de condutos forçados", initials: "EL" },
+  { name: "Hugo Fagundes", description: "Atuação em modelagem hidrológica e transporte de sedimentos", initials: "HF" },
+  { name: "Iran Lima", description: "Atuação em qualidade de água e drenagem", initials: "IL" },
+  { name: "Julian Eleutério", description: "Atuação em modelagem de inundações e rompimentos de barragens", initials: "JE" },
+  { name: "Manuel Herrera", description: "Especialista em hidroinformática", initials: "MH" },
+  { name: "Samuel Belskow", description: "Atuação em modelagem de inundações", initials: "SB" },
 ];
 
 /* ============================ PÁGINA ============================ */
@@ -213,7 +224,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Professores Parceiros (sem foto) — mesmo tamanho dos outros cartões */}
+      {/* Professores Parceiros */}
       <section className="mb-6">
         <h2 className="text-2xl font-semibold mb-4">Professores Parceiros</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
