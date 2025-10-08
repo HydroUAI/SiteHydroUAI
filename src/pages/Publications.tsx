@@ -221,10 +221,7 @@ const Publications = () => {
             <div className="text-3xl md:text-4xl font-bold text-primary mb-2">200+</div>
             <div className="text-muted-foreground">Conferências</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">5</div>
-            <div className="text-muted-foreground">Livros</div>
-          </div>
+
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-primary mb-2">3000+</div>
             <div className="text-muted-foreground">Citações</div>
