@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Contact() {
   const quick = [
-    { title: "Email", icon: Mail, value: "contato@hydrouai.org" },
+    { title: "Email", icon: Mail, value: "hydrouai@gmail.com" },
     { title: "Localização", icon: MapPin, value: "Universidade Federal de Minas Gerais - UFMG" },
   ];
 
