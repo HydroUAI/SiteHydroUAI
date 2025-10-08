@@ -192,7 +192,7 @@ const professoresParceiros: Member[] = [
   { name: "Iran Lima", description: "Atuação em qualidade de água e drenagem", initials: "IL" },
   { name: "Julian Eleutério", description: "Atuação em modelagem de inundações e rompimentos de barragens", initials: "JE" },
   { name: "Manuel Herrera", description: "Especialista em hidroinformática", initials: "MH" },
-  { name: "Samuel Belskow", description: "Atuação em modelagem de inundações", initials: "SB" },
+  { name: "Samuel Beskow", description: "Atuação em modelagem de inundações", initials: "SB" },
 ];
 
 /* ============================ PÁGINA ============================ */
