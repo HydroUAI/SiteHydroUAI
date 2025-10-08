@@ -81,7 +81,7 @@ const coordenacao: Member[] = [
   {
     name: "André Ferreira Rodrigues",
     description:
-      "Doutor em Recursos Hídricos com atuação em hidrologia, modelagem de eventos extremos e aplicação de IA em hidrologia",
+      "Professor em Recursos Hídricos com atuação em hidrologia, modelagem de eventos extremos e aplicação de IA em hidrologia",
     initials: "AR",
     photo: "Andre.jpg",
   },
@@ -127,14 +127,14 @@ const hidrologia: Member[] = [
   {
     name: "Rafael Barreto",
     description:
-      "Pesquisador na área de hidrologia e hidráulica, com foco em modelagem matemática de escoamento e previsão de cheias",
+      "Pesquisa no uso de machine learning para previsão de estado de funcionamento e estado hidráulico de redes de abastecimento de água e aplicação de inteligência artificial explicável para interpretabilidade dos modelos baseados em IA.",
     initials: "RB",
     photo: "Rafael Barreto.jpg",
   },
   {
     name: "Marina Vilaça Mendonça",
     description:
-      "Doutoranda em Engenharia de Recursos Hídricos, com foco em hidrologia estatística e séries temporais",
+      "Aluna de graduação em engenharia ambiental, desenvolvendo iniciação científica na área de sistemas de abastecimento de água e hidráulica.",
     initials: "MV",
     photo: "Marina.jpg",
   },
