@@ -162,13 +162,6 @@ const Projects = () => {
 
   const rodrigoProjects = [
     {
-      title: "UFA-S Avanços em Ferramentas de Nowcasting Aplicadas a Inundações Urbanas",
-      period: "2024-2025",
-      funding: "CNPq",
-      role: "Colaborador",
-      status: "Em andamento"
-    },
-    {
       title: "PD ANP/PETROB- AQUASMART - Estratégias Inovadoras para Manejo e Recuperação de Ecossistemas Aquáticos para Abastecimento da Indústria de Óleo e Gás",
       period: "2024-Atual",
       funding: "Petrobrás",
