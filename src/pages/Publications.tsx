@@ -270,8 +270,6 @@ const Publications = () => {
             </div>
           </TabsContent>
         </Tabs>
-
-        {
       </div>
     </div>
   );
