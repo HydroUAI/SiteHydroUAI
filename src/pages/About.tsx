@@ -9,25 +9,32 @@ type Member = {
 
 /**
  * PersonCard unificado
- * - Mantém exatamente o MESMO tamanho (com e sem foto)
- * - Normaliza o caminho para fotos (prefixa /team quando necessário)
- * - Usa encodeURI para nomes com espaços/acentos
+ * - Mantém o mesmo tamanho (com e sem foto)
+ * - Constrói o caminho da imagem usando BASE_URL do Vite (necessário no GitHub Pages)
+ * - Faz encodeURI para nomes com espaços/acentos
  * - Fallback automático para iniciais quando a imagem falhar
  */
+function buildImageSrc(photo?: string): string | undefined {
+  if (!photo) return undefined;
+  if (photo.startsWith("http") || photo.startsWith("data:")) return photo;
+
+  // BASE_URL é crítico quando o site está em /<org>/<repo>/ (GitHub Pages de projeto)
+  const base = (import.meta as any).env?.BASE_URL || "/";
+
+  // remove barras iniciais para evitar // e normaliza para 'team/...'
+  const clean = photo.replace(/^\/+/, "");
+  const rel = clean.startsWith("team/") ? clean : `team/${clean}`;
+
+  // junta com BASE_URL garantindo que tenha exatamente uma barra
+  const joined = (base.endsWith("/") ? base : base + "/") + rel;
+
+  return encodeURI(joined);
+}
+
 function PersonCard({ m }: { m: Member }) {
   const [broken, setBroken] = React.useState(false);
 
-  // Se vier caminho absoluto/URL, usa como está; caso contrário, prefixa /team/
-  const rawSrc =
-    m.photo && (m.photo.startsWith("/") || m.photo.startsWith("http"))
-      ? m.photo
-      : m.photo
-      ? `/team/${m.photo}`
-      : undefined;
-
-  // Codifica espaços/acentos (ex.: "Bruno Brentan.jpg")
-  const photoSrc = rawSrc ? encodeURI(rawSrc) : undefined;
-
+  const photoSrc = buildImageSrc(m.photo);
   const showAvatar = Boolean(photoSrc && !broken);
 
   return (
@@ -54,7 +61,7 @@ function PersonCard({ m }: { m: Member }) {
   );
 }
 
-/* ===================== LISTAS (ajuste conforme o seu arquivo atual) ===================== */
+/* ===================== LISTAS (verifique nomes exatamente como nos arquivos) ===================== */
 /* Coordenação */
 const coordenacao: Member[] = [
   {
@@ -87,7 +94,7 @@ const coordenacao: Member[] = [
   },
 ];
 
-/* Hidrologia (exemplos; mantenha todos os seus itens atuais) */
+/* Hidrologia */
 const hidrologia: Member[] = [
   {
     name: "Anna Flávia Almeida Perini",
@@ -133,7 +140,7 @@ const hidrologia: Member[] = [
   },
 ];
 
-/* Hidráulica (exemplos; mantenha todos os seus itens atuais) */
+/* Hidráulica */
 const hidraulica: Member[] = [
   {
     name: "Carlos Eduardo Abranches Pacheco",
