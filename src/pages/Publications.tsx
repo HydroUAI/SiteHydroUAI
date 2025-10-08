@@ -214,11 +214,11 @@ const Publications = () => {
         {/* Statistics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">50+</div>
+            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">100+</div>
             <div className="text-muted-foreground">Artigos Publicados</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">25+</div>
+            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">200+</div>
             <div className="text-muted-foreground">Conferências</div>
           </div>
           <div className="text-center">
@@ -226,25 +226,17 @@ const Publications = () => {
             <div className="text-muted-foreground">Livros</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">1200+</div>
+            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">3000+</div>
             <div className="text-muted-foreground">Citações</div>
           </div>
         </div>
 
         {/* Publications Tabs */}
         <Tabs defaultValue="articles" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-8">
+          <TabsList className="grid w-full grid-cols-1 mb-8">
             <TabsTrigger value="articles" className="flex items-center">
               <FileText className="w-4 h-4 mr-2" />
               Artigos
-            </TabsTrigger>
-            <TabsTrigger value="conferences" className="flex items-center">
-              <Users className="w-4 h-4 mr-2" />
-              Conferências
-            </TabsTrigger>
-            <TabsTrigger value="books" className="flex items-center">
-              <Calendar className="w-4 h-4 mr-2" />
-              Livros
             </TabsTrigger>
           </TabsList>
 
@@ -255,21 +247,7 @@ const Publications = () => {
               ))}
             </div>
           </TabsContent>
-
-          <TabsContent value="conferences" className="space-y-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {conferences.map((conference, index) => (
-                <PublicationCard key={index} publication={conference} />
-              ))}
-            </div>
-          </TabsContent>
-
-          <TabsContent value="books" className="space-y-6">
-            <div className="text-center py-12">
-              <p className="text-muted-foreground">Nenhum livro publicado ainda.</p>
-            </div>
-          </TabsContent>
-        </Tabs>
+</Tabs>
       </div>
     </div>
   );
